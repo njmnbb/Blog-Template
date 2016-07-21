@@ -1,0 +1,204 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Kanit', sans-serif;
+}
+
+body {
+	background-color: #323335;
+}
+
+.blog-header-nav-container {
+	height: auto;
+	width: 100%;
+	
+	background-color: #0158af;
+
+	-webkit-box-shadow: 0px 0px 3px 3px rgba(107,107,107,1);
+    -moz-box-shadow: 0px 0px 3px 3px rgba(107,107,107,1);
+    box-shadow: 0px 4px 3px -3px rgba(107,107,107,1);
+	
+	
+    z-index: 9;
+    position: relative;
+}
+
+.blog-header-nav {
+	height: auto;
+	width: 90%;
+	
+	margin: 0 auto;
+	
+	background-color: inherit;
+	display: block;
+	overflow: hidden;
+
+}
+
+.blog-header-nav img {
+	height: 50px;
+	padding: 10px;
+	
+	float: left;
+}
+
+.blog-header-nav input {
+	width: 300px;
+	padding: 10px;
+	font-size: 14px;
+	
+	float: right;
+	margin: 15px 10px;
+	
+	border: none;
+	border-radius: 4px;
+}
+
+.blog-container {
+	height: auto;
+}
+
+.blog-container > div {
+	min-height: 800px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.blog-contents {
+	width: 20%;
+	background-color: #323335;
+	position: relative;
+}
+
+.blog-contents-table {
+	width: 16%;			/* 	These three properties are for */
+	left: 2%;			/*	making the sidebar fixed, but still */
+	position: fixed;	/*	centered in the left margins */
+	
+	min-height: 400px;
+	
+	margin: 70px auto 0px auto;
+	border-radius: 4px;
+}
+
+.blog-contents-list {
+	background-color: #f2f2f2;
+	border-radius: 4px;
+}
+
+.blog-contents-list li {
+	min-height: 54px;
+	list-style-type: none;
+	font-weight: 300;
+}
+
+.blog-contents-list li:first-child {
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.blog-contents-list li:first-child:after {
+	content: '\a0';
+	display: block;
+
+	height: 0px;
+	width: 100%;
+	
+	border-bottom: 2px solid green;
+}
+
+.blog-contents-list li > * {
+	display: block;
+	text-align: left;
+	padding: 15px;
+	text-decoration: none;
+	color: inherit;
+}
+
+.blog-contents-list a:hover {
+	background-color: #c1c1c1;
+	color: inherit;
+}
+
+.blog-body {
+	width: 80%;
+	-webkit-box-shadow: inset -60px 0px 100px -90px #000000, inset 60px 0px 100px -90px #000000;
+	-moz-box-shadow: inset -60px 0px 100px -90px #000000, inset 60px 0px 100px -90px #000000;
+	box-shadow: inset -60px 0px 100px -90px #000000, inset 60px 0px 100px -90px #000000;
+	background-color: white;
+}
+
+.blog-body > * {
+	height: auto;
+	width: 80%;
+	
+	margin: 25px auto;
+}
+
+.blog-body-title {	
+	font-size: 40px;
+	font-weight: 700;
+}
+
+.blog-body-title h1 {
+	line-height: 90px;
+}
+
+.blog-body-title h1:after {
+	content: '\a0';
+	
+	height: 0px;
+	width: 25%;
+	
+	margin: 15px 0px;
+	display: block;
+	border-bottom: 5px solid green;
+}
+
+.blog-body-title p:nth-child(2) {
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.blog-body-post > * {
+	margin: 20px 0px;
+}
+
+.blog-body-post-header {
+	margin-top: 30px;
+	
+	font-size: 45px;
+	font-weight: 500;
+	
+	line-height: 50px;
+}
+
+.blog-body-post-content {
+	font-size: 20px;
+	font-weight: 200;
+}
+
+/**********************
+*****MEDIA QUERIES*****
+**********************/
+
+@media screen and (max-width: 1200px) {
+	.blog-contents, .blog-history, .blog-header-nav input {
+		display: none !important;
+	}
+
+	.blog-header-nav-container {
+		position: fixed;
+	}
+
+	.blog-header-nav img {
+		margin: 0px auto;
+		display: block;
+		float: none;
+	}
+	
+	.blog-body {
+		width: 100%;
+		margin-top: 70px;
+	}
+}

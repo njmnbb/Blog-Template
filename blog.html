@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Blog Example</title>
+
+		<!-- Meta tags -->
+		<meta charset = "utf-8">
+		<meta name = "author" content = "Nick Martini">
+		<meta name = "description" content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan tincidunt orci laoreet pharetra.">
+		
+		<!-- CSS/Fonts -->
+		<link rel = "stylesheet" href = "blog.css">
+		<link href='https://fonts.googleapis.com/css?family=Kanit:200,400,500,700' rel='stylesheet' type='text/css'>
+		
+		<!-- JS/jQuery -->
+		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+	</head>
+	
+	<body>
+		<div class = "blog-header-nav-container">
+			<div class = "blog-header-nav">
+				<img src = "personal_logo_white.png">
+				<input type = "text" name = "search" placeholder =  "Search...">
+			</div>
+		</div>
+		
+		<!-- Start Blog -->
+		<div class = "blog-container">
+			<div class = "blog-contents">
+				<div class = "blog-contents-table">
+					<ul class = "blog-contents-list">
+						
+					</ul>
+				</div>
+			</div
+			><div class = "blog-body">
+				<div class = "blog-body-title">
+					<h1>This is a Test For the Blog Post Title</h1>
+					<p>By: Nick Martini, 7/15/2016</p>
+				</div>
+				<div class = "blog-body-post">
+					<p class = "blog-body-post-header">This is the First Paragraph's Title</p>
+					<p class = "blog-body-post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan tincidunt orci laoreet pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed sit amet sagittis neque, eu rutrum tortor. Pellentesque ultricies eleifend pulvinar. Sed fringilla sapien vel elit gravida mattis. Integer vestibulum eros laoreet neque blandit dignissim. In lacinia nisl at mauris feugiat accumsan. Praesent rutrum efficitur nisi eu faucibus. Curabitur scelerisque, nisi nec ultricies volutpat, ex nisi congue mauris, sit amet commodo lorem orci ac libero.</p>
+					<p class = "blog-body-post-content">Morbi sodales odio magna. Nullam tellus mauris, blandit vitae tortor at, egestas mattis libero. Fusce condimentum elit purus, ut fringilla nunc malesuada in. Sed vulputate neque at nulla pellentesque, id ornare risus rutrum. Vestibulum mollis sodales est, eget vulputate nulla hendrerit at. Nam in erat nisi. Mauris sed faucibus turpis. Donec nec orci in orci euismod rutrum eu dictum elit. </p>
+					<p class = "blog-body-post-header">This is Yet Another Title for the Second Paragraph</p>
+					<p class = "blog-body-post-content">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vestibulum odio id vestibulum pulvinar. Phasellus malesuada ultrices luctus. Mauris ut blandit eros. Vestibulum quis accumsan magna, quis faucibus enim. Donec maximus pharetra nisi in porta. Maecenas tempus in dolor sed efficitur. Nulla efficitur purus lacus, non viverra odio fermentum non. In id vehicula arcu. Duis ornare ullamcorper mi non aliquet. Cras at sodales diam. Phasellus ultrices ex et est imperdiet finibus. Duis id neque a nisi porta hendrerit sit amet id justo. Curabitur eleifend gravida faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+					<p class = "blog-body-post-content">In hendrerit enim at magna fringilla vehicula. Nulla maximus elit justo, sit amet tincidunt quam varius a. Duis lobortis turpis dolor, sit amet dignissim odio vehicula et. Pellentesque sit amet orci commodo, efficitur dolor vel, volutpat massa. Curabitur ac laoreet nibh, vitae accumsan lorem. Maecenas posuere lacinia orci eu congue. Curabitur egestas ligula ut felis eleifend, eget ornare quam eleifend. Mauris at urna dui. Morbi in dolor suscipit, molestie augue nec, maximus eros. Nullam bibendum nec metus id finibus. Sed augue tellus, fringilla et lorem eget, vulputate mollis dolor. Fusce fermentum, tellus vel fringilla tempor, nunc odio aliquam mi, in malesuada tellus erat vitae arcu. Proin sagittis sagittis nisi. </p>
+					<p class = "blog-body-post-content">Proin mauris leo, auctor eget lacinia ac, fermentum at magna. Morbi ac condimentum eros. Etiam eget tortor purus. Sed dui est, tempor a felis sit amet, egestas vehicula felis. Ut tempor, erat eget rutrum malesuada, ante turpis laoreet purus, nec consequat felis turpis in leo. Etiam dignissim egestas dictum. Nullam egestas eros ut viverra dictum. Integer quis libero aliquet, feugiat erat ut, lobortis urna. Curabitur id quam enim. Nunc molestie luctus fermentum. Fusce in bibendum odio. Nam non vulputate neque. Nullam quis odio nec est ullamcorper semper. Cras nec auctor ante. </p>
+					<p class = "blog-body-post-header">And Finally We Have the Last Title for this Post</p>
+					<p class = "blog-body-post-content">Vivamus eget orci eu eros accumsan tempus sed nec neque. Nullam at malesuada lacus, id faucibus velit. Duis scelerisque gravida sem, non vehicula lectus elementum ac. Praesent eget arcu eget purus sodales auctor eget id nisl. Cras quis mattis mauris, a congue lectus. Duis blandit laoreet convallis. Donec eu suscipit mi. Praesent sagittis diam vel ornare pellentesque. Etiam sollicitudin nibh et rhoncus dignissim. </p>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+	<script>
+		var blogContents = $(".blog-contents-list");
+		var paraTitles = $(".blog-body-post").children(".blog-body-post-header");
+		
+		// Get all paragraph headers and append them to sidebar for navigation purposes
+		blogContents.append("<li><p>" + $(".blog-body-title h1").html() + "</p></li>");
+		$(".blog-body-post-header").each(function(i){
+			blogContents.append("<li><a href = \"#header" + i + "\">" + paraTitles[i].innerHTML + "</a></li>");
+			$(this).attr('id', 'header' + i);
+		});
+		
+		
+		////////////////////////////////
+		/////////Event Listeners////////
+		////////////////////////////////
+		$(document).ready(function(){
+		
+			// When paragraph header is clicked in sidebar, page scrolls to appropriate paragraph in blog post
+			$(".blog-contents-list a").on('click', function(event){
+				event.preventDefault(); // Prevents page from scrolling without animation
+
+				var hash = this.hash;
+
+				$("html, body").animate({
+					scrollTop: $(hash).offset().top
+				}, 500);
+
+				setTimeout(function() { window.location.hash = hash }, 500);
+
+			});
+		});
+		
+	</script>
+</html>
